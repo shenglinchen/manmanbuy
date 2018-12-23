@@ -1,0 +1,119 @@
+@import "base.less";
+
+#main {
+    .main-main {
+        position: relative;
+        height: 100%; 
+        // 底部定位住
+	    padding-bottom: 1.24rem;
+        .mui-scroll-wrapper {
+            .all {
+                .name {
+                    padding: 0.1rem;
+
+                    text-align: center;
+                    font-size: 0.14rem;
+                    line-height: 0.2rem;
+
+
+                }
+
+                .img {
+                    height: 1.68rem;
+                    // background-color: red;
+                    text-align: center;
+                }
+
+                .servise {
+                    display: flex;
+                    height: 0.3rem;
+                    li {
+                        flex: 1;
+                        border: 1px solid red;
+                        border-right: 0;
+                        text-align: center;
+                        line-height: 0.3rem;
+                        background-color: #ffc627;
+                        
+                        &:first-of-type {
+                            background-color: #ffa025;
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .from {
+                    height: 0.4rem;
+                    line-height: 0.4rem;
+                    border-bottom: 1px solid #ccc;
+                    .p_pic {
+                        text-align: center;
+                        img {
+                            vertical-align: middle;   
+                        }
+                    }
+
+                    td {
+                        a {
+                            color: #000;
+                            font-size: 0.14rem;
+                            
+                        }
+                    }
+                    .red {
+                        text-align: right;
+                        color: red;
+                    }
+                }
+
+                .no-response {
+                    height: 0.56rem;
+                    padding: 0.1rem;
+                    margin: 0.03rem;
+                    font-size: 0.12rem;
+                    color: #999;
+                }
+
+                .comment {
+                    .title {
+                        height: 0.4rem;
+                        line-height: 0.4rem;
+                        text-align: center;
+                        background-color: #eee;
+                        font-size: 0.16rem;
+                    }
+
+                    .content {
+                        ul {
+                            padding: 0.1rem;
+                            li {
+                                border-bottom: 1px solid #ccc;
+                                p {
+                                    &:not(:last-of-type) {
+                                        height: 0.18rem;
+                                    }
+                                    
+    
+                                    .comName {
+                                        float: left;
+                                    }
+                                    .time {
+                                        float: right;
+                                    }
+    
+                                    .comFrom {
+                                        float: right;
+                                    }
+    
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

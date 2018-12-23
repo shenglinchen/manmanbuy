@@ -1,0 +1,46 @@
+@import "base.less";
+
+#main {
+    .main-main {
+        #refreshContainer {
+            .all {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-top: 0.05rem;
+                    li {
+                        width: 50%;
+                        padding: 0.1rem;
+                        border: 1px solid #ccc;
+
+                        .icon {
+                            width: 100%;
+                            padding: 0.1rem;
+                            img {
+                                width: 1.4rem;
+                                height: 1.4rem;
+                                background-color: red;
+                            }
+                        }
+                        .name {
+                            font-size: 0.14rem;
+                            font-weight: 700;
+                        }
+
+                        .price {
+                            margin: 0.1rem 0;
+                            font-size: 0.14rem;
+                            color: red;
+                        }
+
+                        .other {
+                            display: flex;
+                            font-size: 0.12rem;
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入设置根字号 -->
+    <script src="js/rem.js"></script>
+    <!-- 引入自己写的less -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 引入less编译 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部开始 -->
+    <header id="header">
+        <div class="top">
+            <div class="logo"><a href="index.html">
+                    慢慢买
+                </a></div>
+            <div class="download"></div>
+
+        </div>
+
+
+
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 主体开始 -->
+    <main id="main">
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" name="search" class="search-input" placeholder="请输入你想比价的商品">
+            <button type="button" class="search-btn">搜索</button>
+        </div>
+
+        <!-- 区域滑动 -->
+        <div class="main-main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll all">
+                    <!-- 功能列表 -->
+                    <div class="serviceFun">
+                        <ul></ul>
+                    </div>
+
+                    <div class="more">
+
+                        <i class="fa fa-sort-desc">
+                            更多
+                        </i>
+                        <i class="fa fa-sort-asc">
+                            收起
+                        </i>
+                    </div>
+                    <!-- 超值折扣推荐 -->
+                    <div class="zhekou">
+                        <div class="title">
+                            超值折扣推荐
+                            <a class="fa fa-chevron-right" href="#"></a>
+                        </div>
+                        <div class="content">
+                            <ul></ul>
+                            <!-- 更多优惠信息 -->
+                            <button type="button" class="mui-btn mui-btn-outlined zhekou-more">更多优惠信息
+                                <i class="fa fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- 品牌排行 -->
+                    <div class="brand">
+                        品牌排行
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+
+                    <!-- 底部开始 -->
+                    <div class="footer">
+                        <div class="up">
+                            <div class="login">
+                                <a href="#">登录</a>
+                            </div>
+                            <div class="register">
+                                <a href="#">注册</a>
+                            </div>
+                            <div class="back-top">
+                                <a href="#" class="fa fa-chevron-up">返回顶部</a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="download">
+                                <a href="#">手机APP下载&nbsp;</a>
+                                <span>慢慢买手机办--掌上比价平台</span>
+                            </div>
+                            <div class="link">m.manmanbuy.com</div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom"></div> -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <!-- 主体结束 -->
+
+    <!-- 菜单栏模版 -->
+    <script type="text/html" id="menuTpl">
+        {{ each result value}}
+        <li>
+            <a href="{{value.titlehref}}">
+                <!-- 注意在华括号中不要用空格来美观 -->
+                {{@value.img}}
+                <p>{{ value.name }}</p>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+    <!-- 商品模版 -->
+    <script type="text/html" id="shangpinTpl">
+        {{each result value}}
+        <li>
+            <a href="#" data-id="{{value.Id}}">
+                <div class="icon">
+                        {{@value.productImgSm}}
+                </div>
+                <div class="dec">
+                    <p class="name">{{value.productName}}</p>
+                    <p class="price">{{value.productPinkage}}</p>
+                    <p>
+                        <span class="market">
+                            {{value.productFrom}}
+                        </span>
+                        <span class="line"></span>
+                        <span class="time">{{value.productTime}}</span>
+                        <span class="comment">{{value.productComCount}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 导入模版插件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入自己写的js -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

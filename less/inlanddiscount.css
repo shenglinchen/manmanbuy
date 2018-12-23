@@ -1,0 +1,194 @@
+body {
+  background-color: #fff;
+  padding-top: 0.5rem;
+  height: 100vh;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0.1rem;
+  background-color: #ff4e49;
+}
+#header .top .back {
+  width: 0.3rem;
+  height: 0.3rem;
+  font-size: 0.30rem;
+  line-height: 0.3rem;
+  color: #fff;
+  text-align: center;
+}
+#header .top .title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.20rem;
+}
+#header .top .logo {
+  flex: 1;
+}
+#header .top .logo a {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: url("../images/header_logo.png") no-repeat center;
+  background-size: 2rem 0.25rem;
+  text-indent: -9.99rem;
+}
+#header .top .download {
+  width: 0.35rem;
+  height: 0.35rem;
+  background: url("../images/header_app.png") no-repeat;
+  background-size: 0.35rem 0.35rem;
+}
+#main {
+  position: relative;
+  height: 100%;
+  padding-top: 0.5rem;
+}
+#main .search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 0.5rem;
+  width: 100%;
+  padding: 0.1rem;
+}
+#main .search .search-input {
+  flex: 1;
+  height: 0.3rem;
+  padding-left: 0.1rem;
+  border-radius: 0.15rem;
+  border: 0;
+  margin-right: 0.1rem;
+  font-size: 0.12rem;
+  background-color: #eee;
+}
+#main .search .search-btn {
+  width: 0.6rem;
+  height: 0.3rem;
+  border: 0;
+  padding: 0;
+  border-radius: 0.15rem;
+  color: #fff;
+  font-size: 0.16rem;
+  background-color: #565656;
+  line-height: 0.3rem;
+}
+#main .path {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background-image: linear-gradient(#fff, #ccc);
+  border: 1px solid #bbb;
+  border-radius: 0.02rem;
+  padding: 0 0.1rem;
+}
+#main .path a {
+  color: #000;
+  font-size: 0.16rem;
+}
+#main .path a.select {
+  display: block;
+  float: right;
+  height: 0.3rem;
+  width: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.03rem;
+  line-height: 0.3rem;
+  background-image: linear-gradient(#ccc, #fff);
+  text-align: center;
+  margin-top: 0.1rem;
+}
+#main .footer {
+  position: relative;
+  bottom: 0;
+  background-color: #232a34;
+  text-align: center;
+}
+#main .footer .up {
+  display: flex;
+}
+#main .footer .up a {
+  display: block;
+  color: #fff;
+  width: 100%;
+  height: 0.35rem;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  line-height: 0.35rem;
+  font-size: 0.14rem;
+}
+#main .footer .up .login {
+  flex: 3;
+}
+#main .footer .up .register {
+  flex: 3;
+}
+#main .footer .up .back-top {
+  flex: 4;
+}
+#main .footer .bottom {
+  height: 0.89rem;
+  padding: 0.1rem;
+}
+#main .footer .bottom .download {
+  display: flex;
+  justify-content: center;
+  font-size: 0.12rem;
+  color: #ccc;
+}
+#main .footer .bottom .download a {
+  color: #ff4e49;
+}
+#main .footer .bottom .link {
+  color: #ccc;
+  font-size: 0.12rem;
+  margin-top: 0.1rem;
+}
+#main .main-main #refreshContainer .all ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.05rem;
+}
+#main .main-main #refreshContainer .all ul li {
+  width: 50%;
+  padding: 0.1rem;
+  border: 1px solid #ccc;
+}
+#main .main-main #refreshContainer .all ul li .icon {
+  width: 100%;
+  padding: 0.1rem;
+}
+#main .main-main #refreshContainer .all ul li .icon img {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: red;
+}
+#main .main-main #refreshContainer .all ul li .name {
+  font-size: 0.14rem;
+  font-weight: 700;
+}
+#main .main-main #refreshContainer .all ul li .price {
+  margin: 0.1rem 0;
+  font-size: 0.14rem;
+  color: red;
+}
+#main .main-main #refreshContainer .all ul li .other {
+  display: flex;
+  font-size: 0.12rem;
+  color: #999;
+}

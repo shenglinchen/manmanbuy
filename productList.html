@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入设置根字号 -->
+    <script src="js/rem.js"></script>
+    <!-- 引入自己写的less -->
+    <link rel="stylesheet/less" href="less/productList.less">
+    <!-- 引入less编译 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部开始 -->
+    <header id="header">
+        <div class="top">
+            <div class="logo"><a href="index.html">
+                    慢慢买
+                </a></div>
+            <div class="download"></div>
+
+        </div>
+
+
+
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 主体开始 -->
+    <main id="main">
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" name="search" class="search-input" placeholder="请输入你想比价的商品">
+            <button type="button" class="search-btn">搜索</button>
+        </div>
+        <!-- 路径 -->
+        <div class="path">
+            <a href="index.html">首页 ></a>
+            <a href="category.html">全部分类 ></a>
+            <a href="javascript:location.reload();" class="back"></a>
+            <a class="select" href="#">筛选</a>
+        </div>
+
+        <!-- 区域滑动 -->
+        <div class="main-main">
+            <div class="mui-scroll-wrapper"  id="refreshContainer">
+                <div class="mui-scroll all">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="content">
+                                    <p class="name">
+                                        乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+                                    </p>
+                                    <p class="dec">
+                                        <span class="price">
+                                            $4999
+                                        </span>
+                                        <span class="stars"></span>
+                                    </p>
+                                    <p class="comments">
+                                        <span>评价(2286)</span>
+                                        <span class="baojia">报价(6)</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 底部开始 -->
+                    <div class="footer">
+                        <div class="up">
+                            <div class="login">
+                                <a href="#">登录</a>
+                            </div>
+                            <div class="register">
+                                <a href="#">注册</a>
+                            </div>
+                            <div class="back-top">
+                                <a href="#" class="fa fa-chevron-up">返回顶部</a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="download">
+                                <a href="#">手机APP下载&nbsp;</a>
+                                <span>慢慢买手机办--掌上比价平台</span>
+                            </div>
+                            <div class="link">m.manmanbuy.com</div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom"></div> -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <!-- 主体结束 -->
+
+    <!-- 商品列表模版 -->
+    <script type="text/html" id="shangpinTpl">
+        {{each result value}}
+        <li>
+            <a href="productDetails.html?categoryid={{value.categoryId}}&productId={{value.productId}}">
+                <div class="icon">
+                    {{@value.productImg}}
+                </div>
+                <div class="content">
+                    <p class="name">
+                        {{value.productName}}
+                    </p>
+                    <p class="dec">
+                        <span class="price">
+                            {{value.productPrice}}
+                        </span>
+                        <span class="stars"></span>
+                    </p>
+                    <p class="comments">
+                        <span>{{value.productCom}}</span>
+                        <span class="baojia">{{value.productQuote}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+
+
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 导入模版插件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入自己写的js -->
+    <script src="js/productList.js"></script>
+</body>
+
+</html>

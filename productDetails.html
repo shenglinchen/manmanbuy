@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入设置根字号 -->
+    <script src="js/rem.js"></script>
+    <!-- 引入自己写的less -->
+    <link rel="stylesheet/less" href="less/productDetails.less">
+    <!-- 引入less编译 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部开始 -->
+    <header id="header">
+        <div class="top">
+            <div class="logo"><a href="index.html">
+                    慢慢买
+                </a></div>
+            <div class="download"></div>
+
+        </div>
+
+
+
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 主体开始 -->
+    <main id="main">
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" name="search" class="search-input" placeholder="请输入你想比价的商品">
+            <button type="button" class="search-btn">搜索</button>
+        </div>
+
+        <div class="path">
+            <a href="index.html">首页 ></a>
+            <a href="category.html">全部分类 ></a>
+            <a href="" class="back"></a>
+            <a class="select" href="#">筛选</a>
+        </div>
+        <!-- 区域滑动 -->
+        <div class="main-main">
+            <div class="mui-scroll-wrapper" id="refreshContainer">
+                <div class="mui-scroll all">
+                    <div class="detail">
+                        <div class="name">
+                            乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+                        </div>
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <ul class="servise">
+                        <li><a href="#">比价购买</a></li>
+                        <li><a href="#">产品参数</a></li>
+                        <li><a href="#">优选评论</a></li>
+                    </ul>
+
+                    <!-- 商城 -->
+                    <div class="from">
+                        
+                    </div>
+
+                    <!-- 免责 -->
+                    <div class="no-response">
+                        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+                    </div>
+
+
+                    <!-- 评论 -->
+                    <div class="comment">
+                        <div class="title">网友评论</div>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <p>
+                                        <span class="comName">b***r</span>
+                                        <span class="time">2016/10/1</span>
+                                    </p>
+                                    <p>
+                                        <span class="comFrom">
+                                            购买自：京东商城
+                                        </span>
+                                    </p>
+                                    <p class="comContent">
+                                        使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 底部开始 -->
+                    <div class="footer">
+                        <div class="up">
+                            <div class="login">
+                                <a href="#">登录</a>
+                            </div>
+                            <div class="register">
+                                <a href="#">注册</a>
+                            </div>
+                            <div class="back-top">
+                                <a href="#" class="fa fa-chevron-up">返回顶部</a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="download">
+                                <a href="#">手机APP下载&nbsp;</a>
+                                <span>慢慢买手机办--掌上比价平台</span>
+                            </div>
+                            <div class="link">m.manmanbuy.com</div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom"></div> -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        
+
+
+    </main>
+    <!-- 主体结束 -->
+
+    <!-- 商品详情模版 -->
+    <script type="text/html" id="detailTpl">
+        <!-- {{each result value}} -->
+        <div class="name">
+            {{result[0].productName}}
+        </div>
+        <div class="img">
+            {{@result[0].productImg}}
+        </div>
+        <!-- {{/each}} -->
+
+    </script>
+
+    <!-- 评论模版 -->
+    <script type="text/html" id="commentTpl">
+        {{each result  value}}
+        <li>
+            <p>
+                <span class="comName">{{value.comName}}</span>
+                <span class="time">{{value.comTime}}</span>
+            </p>
+            <p>
+                <span class="comFrom">
+                    {{value.comFrom}}
+                </span>
+            </p>
+            <p class="comContent">
+                {{value.comContent}}
+            </p>
+        </li>
+        {{/each}}
+    </script>
+
+
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 导入模版插件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入自己写的js -->
+    <script src="js/productDetails.js"></script>
+</body>
+
+</html>

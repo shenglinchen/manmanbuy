@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入设置根字号 -->
+    <script src="js/rem.js"></script>
+    <!-- 引入自己写的less -->
+    <link rel="stylesheet/less" href="less/moneyctrl.less">
+    <!-- 引入less编译 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!-- 头部开始 -->
+    <header id="header">
+        <div class="top">
+            <a href="javascript: history.back()" class="fa fa-angle-left back"></a>
+            <div class="title">
+                省钱控 - 最新优惠
+            </div>
+            <div class="download"></div>
+
+        </div>
+
+
+
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 主体开始 -->
+    <main id="main">
+
+
+        <!-- 区域滑动 -->
+        <div class="main-main">
+            <div class="mui-scroll-wrapper" id="refreshContainer">
+                <div class="mui-scroll all">
+
+                    <div class="shangpin">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="icon"></div>
+                                    <div class="dec">
+                                        <p class="name">
+                                            {{value.productName}}
+                                            <span class="price">{{value.productPinkage}}</span>
+                                        </p>
+
+                                        <p class="other">
+                                            <span class="from">{{value.productFrom}} | </span>
+                                            <span class="line">{{value.produvtTime}}</span>
+                                            <span class="comment">{{value.productComCount}}</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 底部开始 -->
+                    <div class="footer">
+                        <div class="up">
+                            <div class="login">
+                                <a href="#">登录</a>
+                            </div>
+                            <div class="register">
+                                <a href="#">注册</a>
+                            </div>
+                            <div class="back-top">
+                                <a href="#" class="fa fa-chevron-up">返回顶部</a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="download">
+                                <a href="#">手机APP下载&nbsp;</a>
+                                <span>慢慢买手机办--掌上比价平台</span>
+                            </div>
+                            <div class="link">m.manmanbuy.com</div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom"></div> -->
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <!-- 主体结束 -->
+
+    <!-- 商品列表模版 -->
+    <script type="text/html" id="shangpinListTpl">
+        {{each result value}}
+        <li>
+            <a href="save-sale.html?productid={{value.productId}}">
+                <div class="icon">
+                    {{@value.productImgSm}}
+                </div>
+                <div class="dec">
+                    <p class="name">
+                            {{value.productName}}
+                        <span class="price">{{value.productPinkage}}</span>
+                    </p>
+                    <p class="other">
+                        <span class="from">{{value.productFrom}} | </span>
+                        <span class="line">{{value.productTime}}</span>
+                        <span class="comment">{{value.productComCount}}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+
+
+    <!-- 引入mui的js -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 导入模版插件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- jquery -->
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入自己写的js -->
+    <script src="js/moneyctrl.js"></script>
+</body>
+
+</html>
